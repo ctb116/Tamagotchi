@@ -1,0 +1,9 @@
+<h1>Your Tamagotchi Family</h1>
+<ul>
+@foreach(var x in Model)
+{
+<li><a href='/tamagotchi/@x.GetId()'>@x.GetName()</a></li>
+}
+</ul>
+
+<a href="/tamagotchi/new">Adopt a new tama</a>
