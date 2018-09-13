@@ -1,9 +1,21 @@
 <h1>@Model.GetName()</h1>
 
 
-<p> Here are where the stats should be and all the buttons</p>
-<p>Food Level: @Model.GetFood()</p>
+<form action="/tamagotchi/@Model.GetId()/feed" method="post">
+<button type="submit" value="Feed">Feed</button>
+</form>
 
+<form action="/tamagotchi/@Model.GetId()/sleep" method="post">
+<button type="submit" value="Sleep">Sleep NOW</button>
+</form>
+
+<form action="/tamagotchi/@Model.GetId()/play" method="post">
+<button type="submit" value="Play">PLay</button>
+</form>
+
+<p>@Model.GetHunger() hunger count</p>
+<p>@Model.GetSleep()  sleep count</p>
+<p>@Model.GetAttention() Attention count</p>
 
 
 <a href='/tamagotchi/new'>Add another tamagotchi</a>
